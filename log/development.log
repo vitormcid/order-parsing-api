@@ -1,0 +1,849 @@
+Started POST "/orders" for ::1 at 2021-05-08 20:47:31 -0300
+  
+ActiveRecord::NoDatabaseError (FATAL:  role "danilo" does not exist
+):
+  
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:696:in `rescue in connect'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:691:in `connect'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:223:in `initialize'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `new'
+activerecord (5.2.6) lib/active_record/connection_adapters/postgresql_adapter.rb:48:in `postgresql_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:830:in `new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:874:in `checkout_new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `try_to_checkout_new_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:814:in `acquire_connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:538:in `checkout'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:382:in `connection'
+activerecord (5.2.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:1033:in `retrieve_connection'
+activerecord (5.2.6) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.6) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.6) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (561.5ms)[0m  [1m[35mCREATE DATABASE "order-parsing-api_development" ENCODING = 'unicode'[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "order-parsing-api_development" ENCODING = 'unicode'[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "order-parsing-api_development" ENCODING = 'unicode'[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (325.7ms)[0m  [1m[35mCREATE DATABASE "order-parsing-api_test" ENCODING = 'unicode'[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Started POST "/orders" for ::1 at 2021-05-08 21:09:07 -0300
+  
+ActionController::RoutingError (uninitialized constant OrdersController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/orders" for ::1 at 2021-05-08 21:11:27 -0300
+  
+ActionController::RoutingError (No route matches [POST] "/orders"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:11:48 -0300
+  
+SyntaxError (/home/danilo/Documents/projects/snackonboard/order-parsing-api/order-parsing-api/app/controllers/api/orders_controller.rb:4: syntax error, unexpected ')', expecting keyword_end
+...erOperation.call(order_params))
+...                              ^):
+  
+app/controllers/api/orders_controller.rb:4: syntax error, unexpected ')', expecting keyword_end
+Started POST "/api/orders" for ::1 at 2021-05-08 21:12:16 -0300
+  
+LoadError (Unable to autoload constant Api::OrdersController, expected /home/danilo/Documents/projects/snackonboard/order-parsing-api/order-parsing-api/app/controllers/api/orders_controller.rb to define it):
+  
+activesupport (5.2.6) lib/active_support/dependencies.rb:511:in `load_missing_constant'
+activesupport (5.2.6) lib/active_support/dependencies.rb:195:in `const_missing'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:285:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+activesupport (5.2.6) lib/active_support/dependencies.rb:582:in `get'
+activesupport (5.2.6) lib/active_support/dependencies.rb:613:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/parameters.rb:101:in `binary_params_for?'
+actionpack (5.2.6) lib/action_dispatch/http/parameters.rb:92:in `set_binary_encoding'
+actionpack (5.2.6) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:13:37 -0300
+Processing by Api::OrdersController#create as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x000055ffedd48e40>
+Did you mean?  try):
+  
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:14:34 -0300
+Processing by Api::OrdersController#create as */*
+Completed 500 Internal Server Error in 105430ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::OrdersController::Operations):
+  
+app/controllers/api/orders_controller.rb:4:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:16:31 -0300
+Processing by Api::OrdersController#create as */*
+Completed 500 Internal Server Error in 36899ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::OrdersController::Operations):
+  
+app/controllers/api/orders_controller.rb:4:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:18:59 -0300
+Processing by Api::OrdersController#create as */*
+Completed 500 Internal Server Error in 259596ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::OrdersController::Operations):
+  
+app/controllers/api/orders_controller.rb:4:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+Started POST "/api/orders" for ::1 at 2021-05-08 21:29:05 -0300
+Processing by Api::OrdersController#create as */*
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 40844ms (ActiveRecord: 0.6ms)
+
+
+  
+NameError (undefined local variable or method `organizers' for Operations::Orders::CreateOrderOperation:Class):
+  
+lib/operations/orders/create_order_operation.rb:22:in `start_operation'
+lib/operations/orders/create_order_operation.rb:8:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:29:50 -0300
+Processing by Api::OrdersController#create as */*
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 6588ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+lib/operations/orders/create_order_operation.rb:10:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:39:35 -0300
+Processing by Api::OrdersController#create as */*
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `each_pair' for "teste":String
+Did you mean?  each_char):
+  
+lib/operations/orders/create_order_operation.rb:21:in `start_operation'
+lib/operations/orders/create_order_operation.rb:8:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:41:11 -0300
+Processing by Api::OrdersController#create as */*
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 121679ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `each_pair' for "teste":String
+Did you mean?  each_char):
+  
+lib/operations/orders/create_order_operation.rb:22:in `start_operation'
+lib/operations/orders/create_order_operation.rb:8:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 21:44:43 -0300
+Processing by Api::OrdersController#create as */*
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 29526ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `assigns' for nil:NilClass):
+  
+lib/operations/orders/create_order_operation.rb:13:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:30:15 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+NameError (uninitialized constant Interactors::SendOrder):
+  
+lib/organizers/create_order.rb:4:in `<class:CreateOrder>'
+lib/organizers/create_order.rb:2:in `<module:Organizers>'
+lib/organizers/create_order.rb:1:in `<top (required)>'
+lib/operations/orders/create_order_operation.rb:21:in `start_operation'
+lib/operations/orders/create_order_operation.rb:8:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:31:32 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `ParseOrder' for Interactors:Module):
+  
+lib/organizers/create_order.rb:4:in `<class:CreateOrder>'
+lib/organizers/create_order.rb:2:in `<module:Organizers>'
+lib/organizers/create_order.rb:1:in `<top (required)>'
+lib/operations/orders/create_order_operation.rb:21:in `start_operation'
+lib/operations/orders/create_order_operation.rb:8:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:32:40 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `ParseOrder' for Interactors:Module):
+  
+lib/organizers/create_order.rb:4:in `<class:CreateOrder>'
+lib/organizers/create_order.rb:2:in `<module:Organizers>'
+lib/organizers/create_order.rb:1:in `<top (required)>'
+lib/operations/orders/create_order_operation.rb:21:in `start_operation'
+lib/operations/orders/create_order_operation.rb:8:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:32:53 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `ParseOrder' for Interactors:Module):
+  
+lib/organizers/create_order.rb:4:in `<class:CreateOrder>'
+lib/organizers/create_order.rb:2:in `<module:Organizers>'
+lib/organizers/create_order.rb:1:in `<top (required)>'
+lib/operations/orders/create_order_operation.rb:21:in `start_operation'
+lib/operations/orders/create_order_operation.rb:8:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:33:38 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 21294ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `ParseOrder' for Interactors:Module):
+  
+lib/organizers/create_order.rb:5:in `<class:CreateOrder>'
+lib/organizers/create_order.rb:2:in `<module:Organizers>'
+lib/organizers/create_order.rb:1:in `<top (required)>'
+lib/operations/orders/create_order_operation.rb:21:in `start_operation'
+lib/operations/orders/create_order_operation.rb:8:in `block in call'
+lib/operations/orders/create_order_operation.rb:7:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:35:06 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 14133ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `assigns' for nil:NilClass):
+  
+lib/operations/orders/create_order_operation.rb:13:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:35:59 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 12203ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `assigns' for nil:NilClass):
+  
+lib/operations/orders/create_order_operation.rb:13:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:36:29 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 21149ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `assigns' for nil:NilClass):
+  
+lib/operations/orders/create_order_operation.rb:13:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+Started POST "/api/orders" for ::1 at 2021-05-08 22:37:12 -0300
+Processing by Api::OrdersController#create as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/operations/orders/create_order_operation.rb:7
+Completed 500 Internal Server Error in 73608ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `assigns' for nil:NilClass):
+  
+lib/operations/orders/create_order_operation.rb:13:in `call'
+app/controllers/api/orders_controller.rb:3:in `create'
+  [1m[35m (10.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to Orders (20210509014115)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "store_id" integer, "date_created" timestamp, "date_closed" timestamp, "last_updated" timestamp, "total_amount" float, "total_shipping" integer, "total_amount_with_shipping" float, "paid_amount" float, "expiration_date" timestamp, "shipping_id" integer, "status" character varying, "buyer_id" integer)[0m
+  ↳ db/migrate/20210509014115_orders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509014115"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-09 02:12:11.558787"], ["updated_at", "2021-05-09 02:12:11.558787"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Create (0.7ms)[0m  [1m[32mINSERT INTO "orders" ("date_created") VALUES ($1) RETURNING "id"[0m  [["date_created", "2021-05-09 02:13:53.700247"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to Orders (20210509014115)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210509014115"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateOrders (20210509014150)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateOrders (20210509014150)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" bigserial primary key, "store_id" integer, "date_created" timestamp, "date_closed" timestamp, "last_updated" timestamp, "total_amount" float, "total_shipping" integer, "total_amount_with_shipping" float, "paid_amount" float, "expiration_date" timestamp, "shipping_id" integer, "status" character varying, "buyer_id" integer)[0m
+  ↳ db/migrate/20210509014150_create_orders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509014150"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateOrderItems (20210509014227)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "order_items" ("id" bigserial primary key, "item_id" integer, "quantity" integer, "unit_price" float, "full_unit_price" float)[0m
+  ↳ db/migrate/20210509014227_create_order_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509014227"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrderItem Create (1.5ms)[0m  [1m[32mINSERT INTO "order_items" DEFAULT VALUES RETURNING "id"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateItems (20210509015224)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "title" character varying)[0m
+  ↳ db/migrate/20210509015224_create_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015224"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreatePayments (20210509014311)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "payments" ("id" bigserial primary key, "order_id" integer, "payer_id" integer, "installments" integer, "payment_type" character varying, "paid" character varying, "transaction_amount" float, "taxes_amount" integer, "shipping_cost" float, "total_paid_amount" float, "installment_amount" float, "date_approved" timestamp, "date_created" timestamp)[0m
+  ↳ db/migrate/20210509014311_create_payments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509014311"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateShippings (20210509014654)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "shippings" ("id" bigserial primary key, "shipment_type" character varying, "date_created" timestamp, "receiver_address_id" integer)[0m
+  ↳ db/migrate/20210509014654_create_shippings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509014654"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateReceiverAddresses (20210509015417)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "receiver_addresses" ("id" bigserial primary key, "address_line" character varying, "street_name" character varying, "street_number" character varying, "comment" character varying, "zip_code" character varying, "city_id" integer, "state_id" integer, "country_id" integer, "neighborhood_id" integer, "latitude" integer, "longitude" integer, "receiver_phone" character varying)[0m
+  ↳ db/migrate/20210509015417_create_receiver_addresses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015417"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateCities (20210509015445)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "cities" ("id" bigserial primary key, "name" character varying)[0m
+  ↳ db/migrate/20210509015445_create_cities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015445"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateStates (20210509015455)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "states" ("id" bigserial primary key, "name" character varying)[0m
+  ↳ db/migrate/20210509015455_create_states.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015455"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateCountries (20210509015524)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateCountries (20210509015524)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "countries" ("id" bigserial primary key, "initials" character varying, "name" character varying)[0m
+  ↳ db/migrate/20210509015524_create_countries.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015524"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateNeighborhoods (20210509015605)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE TABLE "neighborhoods" ("id" bigserial primary key, "name" character varying)[0m
+  ↳ db/migrate/20210509015605_create_neighborhoods.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015605"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateBuyers (20210509015051)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "buyers" ("id" bigserial primary key, "nickname" character varying, "email" character varying, "phone_id" integer, "first_name" character varying, "last_name" character varying, "billing_info_id" integer)[0m
+  ↳ db/migrate/20210509015051_create_buyers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015051"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreatePhones (20210509015659)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "phones" ("id" bigserial primary key, "area_code" integer, "number" character varying)[0m
+  ↳ db/migrate/20210509015659_create_phones.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015659"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+Migrating to CreateBillingInfos (20210509015724)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "billing_infos" ("id" bigserial primary key, "doc_type" character varying, "doc_number" character varying)[0m
+  ↳ db/migrate/20210509015724_create_billing_infos.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210509015724"]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7125409267440505860)[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/danilo/.rvm/gems/ruby-2.5.5/bin/rake:23

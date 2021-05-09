@@ -23,7 +23,11 @@ default: &default
 
 development:
   <<: *default
+  port: 5432
+  host: localhost
   database: order-parsing-api_development
+  username: postgres 
+  password: postgres
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
