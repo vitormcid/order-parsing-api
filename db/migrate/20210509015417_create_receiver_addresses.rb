@@ -1,6 +1,7 @@
 class CreateReceiverAddresses < ActiveRecord::Migration[5.2]
   def change
     create_table :receiver_addresses do |t|
+      t.string   :external_id
     	t.string   :address_line
       t.string   :street_name
       t.string 	 :street_number

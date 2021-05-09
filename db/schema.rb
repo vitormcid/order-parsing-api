@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_015724) do
   end
 
   create_table "buyers", force: :cascade do |t|
+    t.string "external_id"
     t.string "nickname"
     t.string "email"
     t.integer "phone_id"
@@ -34,19 +35,23 @@ ActiveRecord::Schema.define(version: 2021_05_09_015724) do
   end
 
   create_table "countries", force: :cascade do |t|
+    t.string "external_id"
     t.string "initials"
     t.string "name"
   end
 
   create_table "items", force: :cascade do |t|
+    t.string "external_id"
     t.string "title"
   end
 
   create_table "neighborhoods", force: :cascade do |t|
+    t.string "external_id"
     t.string "name"
   end
 
   create_table "order_items", force: :cascade do |t|
+    t.integer "order_id"
     t.integer "item_id"
     t.integer "quantity"
     t.float "unit_price"
@@ -54,12 +59,13 @@ ActiveRecord::Schema.define(version: 2021_05_09_015724) do
   end
 
   create_table "orders", force: :cascade do |t|
+    t.string "external_id"
     t.integer "store_id"
     t.datetime "date_created"
     t.datetime "date_closed"
     t.datetime "last_updated"
     t.float "total_amount"
-    t.integer "total_shipping"
+    t.float "total_shipping"
     t.float "total_amount_with_shipping"
     t.float "paid_amount"
     t.datetime "expiration_date"
@@ -69,11 +75,13 @@ ActiveRecord::Schema.define(version: 2021_05_09_015724) do
   end
 
   create_table "payments", force: :cascade do |t|
+    t.string "external_id"
     t.integer "order_id"
     t.integer "payer_id"
     t.integer "installments"
     t.string "payment_type"
     t.string "paid"
+    t.string "status"
     t.float "transaction_amount"
     t.integer "taxes_amount"
     t.float "shipping_cost"
@@ -89,6 +97,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_015724) do
   end
 
   create_table "receiver_addresses", force: :cascade do |t|
+    t.string "external_id"
     t.string "address_line"
     t.string "street_name"
     t.string "street_number"
@@ -104,6 +113,7 @@ ActiveRecord::Schema.define(version: 2021_05_09_015724) do
   end
 
   create_table "shippings", force: :cascade do |t|
+    t.string "external_id"
     t.string "shipment_type"
     t.datetime "date_created"
     t.integer "receiver_address_id"

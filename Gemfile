@@ -13,6 +13,10 @@ gem 'puma', '~> 3.11'
 gem 'pry'
 
 gem "interactor", "~> 3.0"
+
+gem 'active_model_serializers'
+
+gem 'httparty'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
