@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Sobre o Projeto
 
-Things you may want to cover:
+   Esse projeto foi desenvolvido como processo seletivo da Delivery Center. Seu objetivo é fazer o parsing de um payload e envia-lo para uma API Rest.
+  
+* Versâo do Ruby
+	 2.5.5
 
-* Ruby version
+* Dependencias do Sistema
+	Postgres >= 10
 
-* System dependencies
+* Criação da database
+	rake db:setup
 
-* Configuration
+* Inicialização da database
+	rake db:migrate
 
-* Database creation
+* Como rodar os tests
+	rspec
 
-* Database initialization
+* Como inicializar o projeto
+	rails s
 
-* How to run the test suite
+* Como utilizar a API
+	 utilizar a rota post  /api/orders/integrate_order 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
