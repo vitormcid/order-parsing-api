@@ -1,5 +1,3 @@
 Rails.application.routes.draw do
-	namespace :api do
-		resource :orders, only: :create
-	end 
+	post 'api/orders/integrate_order', to: 'api/orders#integrate_order'
 end

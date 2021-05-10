@@ -3,7 +3,7 @@ module Interactors
     include Interactor
     
     def call
-    	send_order
+    	context.response = send_order
     end
 
     private
@@ -15,6 +15,8 @@ module Interactors
           :body => context.parsed_hash.to_json,
           :headers => {'X-Sent': DateTime.now.strftime("%Hh%M-%d/%m/%y")}
 			)
+        
+      response
     end
   end
 end

@@ -1,9 +1,15 @@
 module Interactors
   class ParseOrder
     include Interactor
+
+    before do
+      errors = Validations::Order.run(params, :parse)
+      context.errors =  errors
+    end
     
     def call
- 			initialize_entities 			
+      return if context.errors.present?
+ 	    initialize_entities 			
     end
 
     private

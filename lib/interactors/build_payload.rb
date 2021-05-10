@@ -1,6 +1,11 @@
 module Interactors
   class BuildPayload
     include Interactor
+
+    before do
+      errors = Validations::Order.run(context.params, :build)
+      context.errors.concat errors
+    end
     
     def call    	
     	context.parsed_hash = parsed_hash
@@ -9,7 +14,9 @@ module Interactors
 
     private
     
-    def parsed_hash    	
+    def parsed_hash 
+      return unless context.order.present?
+
     	{
 		    "externalCode": context.order.external_id,
 		    "storeId": context.order.store_id,
