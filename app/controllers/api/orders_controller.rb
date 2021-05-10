@@ -1,6 +1,6 @@
 class Api::OrdersController < ApplicationController
-  def integrate_order
-    result = Organizers::IntegrateOrder.call(params: params)
+  def integrate_order  	
+    result = Organizers::IntegrateOrder.call( params: params )
     
     if result.errors.present?
       render json: result.errors.to_json, status: 400

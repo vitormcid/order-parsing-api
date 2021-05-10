@@ -21792,3 +21792,84 @@ Completed 200 OK in 936ms (Views: 5.9ms | ActiveRecord: 43.3ms)
 
   [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" ORDER BY "orders"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/orders/integrate_order" for ::1 at 2021-05-10 14:47:09 -0300
+Processing by Api::OrdersController#integrate_order as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "total_shipping"=>5.14}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.7ms)
+
+
+  
+NameError (uninitialized constant Params::OrdersParams):
+  
+app/controllers/api/orders_controller.rb:3:in `integrate_order'
+Started POST "/api/orders/integrate_order" for ::1 at 2021-05-10 14:47:24 -0300
+Processing by Api::OrdersController#integrate_order as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "total_shipping"=>5.14}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 3.9ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+lib/params/order_params.rb:4:in `call'
+app/controllers/api/orders_controller.rb:3:in `integrate_order'
+Started POST "/api/orders/integrate_order" for ::1 at 2021-05-10 14:47:35 -0300
+Processing by Api::OrdersController#integrate_order as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "total_shipping"=>5.14}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.7ms)
+
+
+  
+NoMethodError (undefined method `OrderParams' for Params:Module):
+  
+app/controllers/api/orders_controller.rb:3:in `integrate_order'
+Started POST "/api/orders/integrate_order" for ::1 at 2021-05-10 14:48:00 -0300
+Processing by Api::OrdersController#integrate_order as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "total_shipping"=>5.14}}
+Unpermitted parameters: :last_updated, :order
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" ORDER BY "addresses"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ lib/interactors/save_order.rb:25
+Completed 500 Internal Server Error in 836ms (ActiveRecord: 8.4ms)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+lib/interactors/save_order.rb:29:in `save_customer'
+lib/interactors/save_order.rb:11:in `save_all'
+lib/interactors/save_order.rb:6:in `call'
+app/controllers/api/orders_controller.rb:3:in `integrate_order'
+Started POST "/api/orders/integrate_order" for ::1 at 2021-05-10 14:48:22 -0300
+Processing by Api::OrdersController#integrate_order as */*
+  Parameters: {"id"=>9987071, "store_id"=>282, "date_created"=>"2019-06-24T16:45:32.000-04:00", "date_closed"=>"2019-06-24T16:45:35.000-04:00", "last_updated"=>"2019-06-25T13:26:49.000-04:00", "total_amount"=>49.9, "total_shipping"=>5.14, "total_amount_with_shipping"=>55.04, "paid_amount"=>55.04, "expiration_date"=>"2019-07-22T16:45:35.000-04:00", "order_items"=>[{"item"=>{"id"=>"IT4801901403", "title"=>"Produto de Testes"}, "quantity"=>1, "unit_price"=>49.9, "full_unit_price"=>49.9}], "payments"=>[{"id"=>12312313, "order_id"=>9987071, "payer_id"=>414138, "installments"=>1, "payment_type"=>"credit_card", "status"=>"paid", "transaction_amount"=>49.9, "taxes_amount"=>0, "shipping_cost"=>5.14, "total_paid_amount"=>55.04, "installment_amount"=>55.04, "date_approved"=>"2019-06-24T16:45:35.000-04:00", "date_created"=>"2019-06-24T16:45:33.000-04:00"}], "shipping"=>{"id"=>43444211797, "shipment_type"=>"shipping", "date_created"=>"2019-06-24T16:45:33.000-04:00", "receiver_address"=>{"id"=>1051695306, "address_line"=>"Rua Fake de Testes 3454", "street_name"=>"Rua Fake de Testes", "street_number"=>"3454", "comment"=>"teste", "zip_code"=>"85045020", "city"=>{"name"=>"Cidade de Testes"}, "state"=>{"name"=>"São Paulo"}, "country"=>{"id"=>"BR", "name"=>"Brasil"}, "neighborhood"=>{"id"=>nil, "name"=>"Vila de Testes"}, "latitude"=>-23.629037, "longitude"=>-46.712689, "receiver_phone"=>"41999999999"}}, "status"=>"paid", "buyer"=>{"id"=>136226073, "nickname"=>"JOHN DOE", "email"=>"john@doe.com", "phone"=>{"area_code"=>41, "number"=>"999999999"}, "first_name"=>"John", "last_name"=>"Doe", "billing_info"=>{"doc_type"=>"CPF", "doc_number"=>"09487965477"}}, "order"=>{"id"=>9987071, "total_shipping"=>5.14}}
+  [1m[36mAddress Load (0.7ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."country" = $1 AND "addresses"."state" = $2 AND "addresses"."city" = $3 AND "addresses"."district" = $4 AND "addresses"."street" = $5 AND "addresses"."complement" = $6 AND "addresses"."latitude" = $7 AND "addresses"."longitude" = $8 AND "addresses"."postalCode" = $9 AND "addresses"."number" = $10 ORDER BY "addresses"."id" ASC LIMIT $11[0m  [["country", "BR"], ["state", "São Paulo"], ["city", "Cidade de Testes"], ["district", "Vila de Testes"], ["street", "Rua Fake de Testes"], ["complement", "teste"], ["latitude", -23.629037], ["longitude", -46.712689], ["postalCode", "85045020"], ["number", "3454"], ["LIMIT", 1]]
+  ↳ lib/interactors/save_order.rb:25
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."externalCode" = $1 AND "customers"."name" = $2 AND "customers"."email" = $3 AND "customers"."contact" = $4 ORDER BY "customers"."id" ASC LIMIT $5[0m  [["externalCode", "136226073"], ["name", "JOHN DOE"], ["email", "john@doe.com"], ["contact", "41 999999999"], ["LIMIT", 1]]
+  ↳ lib/interactors/save_order.rb:29
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."externalCode" = $1 AND "orders"."storeId" = $2 AND "orders"."subTotal" = $3 AND "orders"."deliveryFee" = $4 AND "orders"."total_shipping" = $5 AND "orders"."total" = $6 AND "orders"."dtOrderCreate" = $7 ORDER BY "orders"."id" ASC LIMIT $8[0m  [["externalCode", "9987071"], ["storeId", 282], ["subTotal", "49.9"], ["deliveryFee", "5.14"], ["total_shipping", 5.14], ["total", "55.04"], ["dtOrderCreate", "2019-06-24T16:45:32.000-04:00"], ["LIMIT", 1]]
+  ↳ lib/interactors/save_order.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/interactors/save_order.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/interactors/save_order.rb:21
+  [1m[36mPayment Load (0.3ms)[0m  [1m[34mSELECT  "payments".* FROM "payments" WHERE "payments"."value" = $1 AND "payments"."kind" = $2 ORDER BY "payments"."id" ASC LIMIT $3[0m  [["value", 55.04], ["kind", "credit_card"], ["LIMIT", 1]]
+  ↳ lib/interactors/save_order.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/interactors/save_order.rb:37
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/interactors/save_order.rb:37
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."externalCode" = $1 AND "items"."name" = $2 AND "items"."price" = $3 ORDER BY "items"."id" ASC LIMIT $4[0m  [["externalCode", "IT4801901403"], ["name", "Produto de Testes"], ["price", 49.9], ["LIMIT", 1]]
+  ↳ lib/interactors/save_order.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ lib/interactors/save_order.rb:47
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ lib/interactors/save_order.rb:47
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ lib/interactors/save_order.rb:47
+  [1m[36mOrderItem Create (0.6ms)[0m  [1m[32mINSERT INTO "order_items" ("order_id", "item_id", "quantity", "total") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["order_id", 1], ["item_id", 1], ["quantity", 1], ["total", 49.9]]
+  ↳ lib/interactors/save_order.rb:47
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ lib/interactors/save_order.rb:47
+Completed 200 OK in 961ms (Views: 5.5ms | ActiveRecord: 36.1ms)
+
+
