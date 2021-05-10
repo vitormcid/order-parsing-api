@@ -7,6 +7,8 @@ module Interactors
     end
 
     def save_all
+      return unless context.order.present?
+
       save_address
       save_customer
       save_order
