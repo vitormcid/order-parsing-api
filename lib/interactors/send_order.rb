@@ -13,10 +13,14 @@ module Interactors
     		HTTParty.post(
     			"https://delivery-center-recruitment-ap.herokuapp.com/",
           :body => context.parsed_hash.to_json,
-          :headers => {'X-Sent': DateTime.now.strftime("%Hh%M-%d/%m/%y")}
+          :headers => {'X-Sent': formated_current_date }
 			)
         
       response
+    end
+
+    def formated_current_date
+      DateTime.now.strftime("%Hh%M-%d/%m/%y")
     end
   end
 end

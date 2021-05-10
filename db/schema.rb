@@ -10,117 +10,60 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_09_015724) do
+ActiveRecord::Schema.define(version: 2021_05_10_163108) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "billing_infos", force: :cascade do |t|
-    t.string "doc_type"
-    t.string "doc_number"
+  create_table "addresses", force: :cascade do |t|
+    t.string "country"
+    t.string "state"
+    t.string "city"
+    t.string "district"
+    t.string "street"
+    t.string "complement"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "postalCode"
+    t.string "number"
   end
 
-  create_table "buyers", force: :cascade do |t|
-    t.string "external_id"
-    t.string "nickname"
+  create_table "customers", force: :cascade do |t|
+    t.string "externalCode"
+    t.string "name"
     t.string "email"
-    t.integer "phone_id"
-    t.string "first_name"
-    t.string "last_name"
-    t.integer "billing_info_id"
-  end
-
-  create_table "cities", force: :cascade do |t|
-    t.string "name"
-  end
-
-  create_table "countries", force: :cascade do |t|
-    t.string "external_id"
-    t.string "initials"
-    t.string "name"
+    t.string "contact"
   end
 
   create_table "items", force: :cascade do |t|
-    t.string "external_id"
-    t.string "title"
-  end
-
-  create_table "neighborhoods", force: :cascade do |t|
-    t.string "external_id"
+    t.string "externalCode"
     t.string "name"
+    t.float "price"
   end
 
   create_table "order_items", force: :cascade do |t|
     t.integer "order_id"
     t.integer "item_id"
     t.integer "quantity"
-    t.float "unit_price"
-    t.float "full_unit_price"
+    t.float "total"
   end
 
   create_table "orders", force: :cascade do |t|
-    t.string "external_id"
-    t.integer "store_id"
-    t.datetime "date_created"
-    t.datetime "date_closed"
-    t.datetime "last_updated"
-    t.float "total_amount"
+    t.integer "address_id"
+    t.integer "customer_id"
+    t.string "externalCode"
+    t.integer "storeId"
+    t.string "subTotal"
+    t.string "deliveryFee"
     t.float "total_shipping"
-    t.float "total_amount_with_shipping"
-    t.float "paid_amount"
-    t.datetime "expiration_date"
-    t.integer "shipping_id"
-    t.string "status"
-    t.integer "buyer_id"
+    t.string "total"
+    t.string "dtOrderCreate"
   end
 
   create_table "payments", force: :cascade do |t|
-    t.string "external_id"
     t.integer "order_id"
-    t.integer "payer_id"
-    t.integer "installments"
-    t.string "payment_type"
-    t.string "paid"
-    t.string "status"
-    t.float "transaction_amount"
-    t.integer "taxes_amount"
-    t.float "shipping_cost"
-    t.float "total_paid_amount"
-    t.float "installment_amount"
-    t.datetime "date_approved"
-    t.datetime "date_created"
-  end
-
-  create_table "phones", force: :cascade do |t|
-    t.integer "area_code"
-    t.string "number"
-  end
-
-  create_table "receiver_addresses", force: :cascade do |t|
-    t.string "external_id"
-    t.string "address_line"
-    t.string "street_name"
-    t.string "street_number"
-    t.string "comment"
-    t.string "zip_code"
-    t.integer "city_id"
-    t.integer "state_id"
-    t.integer "country_id"
-    t.integer "neighborhood_id"
-    t.integer "latitude"
-    t.integer "longitude"
-    t.string "receiver_phone"
-  end
-
-  create_table "shippings", force: :cascade do |t|
-    t.string "external_id"
-    t.string "shipment_type"
-    t.datetime "date_created"
-    t.integer "receiver_address_id"
-  end
-
-  create_table "states", force: :cascade do |t|
-    t.string "name"
+    t.string "kind"
+    t.float "value"
   end
 
 end
