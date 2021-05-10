@@ -1,9 +1,9 @@
 module Parsers
   class ParsePayments
     class << self
-      def call(params)    
+      def call(params)
         parsed_payments = []
-        
+
         params.each do |payment|
           parsed_payments << {
             type: payment[:payment_type],
@@ -11,7 +11,7 @@ module Parsers
           }
         end
 
-        {payments: parsed_payments}
+        { payments: parsed_payments }
       end
     end
   end

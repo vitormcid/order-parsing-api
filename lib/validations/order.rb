@@ -1,7 +1,7 @@
 module Validations
   class Order
     class << self
-      def run(params)        
+      def run(params)
         validate_order_schema(params)
       end
 
@@ -11,8 +11,8 @@ module Validations
         params.permit!.to_h
       end
 
-      def validate_order_schema(params) 
-        HashValidator.validate(hash_params(params), Schemas::OrderSchema.call).errors 
+      def validate_order_schema(params)
+        HashValidator.validate(hash_params(params), Schemas::OrderSchema.call).errors
       end
     end
   end

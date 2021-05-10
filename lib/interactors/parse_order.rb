@@ -2,29 +2,30 @@ module Interactors
   class ParseOrder
     include Interactor
 
-    before do      
+    before do
       errors = Validations::Order.run(params)
       context.errors =  errors
     end
 
     def call
       return if context.errors.present?
- 	    parse_all 			
+
+      parse_all
     end
 
     private
 
     def parse_all
-    	parsing_methods.each do |method|
-    		send("#{method}")
-    	end
+      parsing_methods.each do |method|
+        send(method.to_s)
+      end
     end
 
     def parse_order
       context.order = Parsers::ParseOrder.call(params)
     end
 
-    def parse_address      
+    def parse_address
       context.address = Parsers::ParseAddress.call(address_params)
     end
 
@@ -32,7 +33,7 @@ module Interactors
       context.items = Parsers::ParseItems.call(items_params)
     end
 
-    def parse_customer         
+    def parse_customer
       context.customer = Parsers::ParseCustomer.call(customer_params)
     end
 
@@ -42,7 +43,7 @@ module Interactors
 
     def params
       @params ||= context.params
-    end   
+    end
 
     def address_params
       params[:shipping][:receiver_address]
@@ -61,10 +62,8 @@ module Interactors
     end
 
     def parsing_methods
-      ['parse_order', 'parse_address', 'parse_items',
-       'parse_customer', 'parse_payments' 
-      ]
+      %w[parse_order parse_address parse_items
+         parse_customer parse_payments]
     end
   end
 end
-

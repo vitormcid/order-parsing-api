@@ -8,11 +8,11 @@ module Schemas
           "date_created": String,
           "date_closed": String,
           "last_updated": String,
-          "total_amount": Float,        
+          "total_amount": Float,
           "total_amount_with_shipping": Float,
           "paid_amount": Float,
           "expiration_date": String,
-          "total_shipping": Float,       
+          "total_shipping": Float,
           "shipping": {
             "id": Integer,
             "shipment_type": String,
@@ -22,7 +22,7 @@ module Schemas
               "address_line": String,
               "street_name": String,
               "street_number": String,
-              "comment":  String,
+              "comment": String,
               "zip_code": String,
               "city": {
                 "name": String
@@ -34,7 +34,7 @@ module Schemas
                 "id": String,
                 "name": String
               },
-              "neighborhood": {             
+              "neighborhood": {
                 "name": String
               },
               "latitude": Float,

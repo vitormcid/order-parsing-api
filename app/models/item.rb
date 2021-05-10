@@ -1,3 +1,5 @@
 class Item < ApplicationRecord
-	has_one :order_item
+  validates :externalCode, :name, :price, presence: true
+
+  has_one :order_item
 end

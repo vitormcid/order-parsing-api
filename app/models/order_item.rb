@@ -1,5 +1,6 @@
 class OrderItem < ApplicationRecord
-	belongs_to :order
-	belongs_to :item
-end
+  validates :order_id, :item_id, :quantity, :total, presence: true
 
+  belongs_to :order
+  belongs_to :item
+end
